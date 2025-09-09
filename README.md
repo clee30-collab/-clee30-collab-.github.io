@@ -1,2 +1,2 @@
-# -clee30-collab-.github.io
+# clee30-collab.github.io
 class website
