@@ -120,17 +120,16 @@
     background: red;
     border: solid 3px black;
 }
-#arm4 {
+
+#triangle-topleft {
     width: 0;
-      height: 0;
-      border-top: 100px solid red;
-      border-right: 100px solid transparent;
-    background: red;
-}
-#arm4down {
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+  }
+#triangle-topright {
     width: 0;
-      height: 0;
-      border-bottom: 100px solid red;
-      border-right: 100px solid transparent;
-    background: red;
-}
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+  }
