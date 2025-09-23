@@ -1,11 +1,7 @@
 a {
     color:cornflowerblue; /* Default link color */
   }
-  
-  a:active {
-    color:mediumseagreen; /* Color when actively clicked */
-  }
-  
+
   a:visited {
     color: palevioletred; /* Color after being visited */
   }
@@ -31,7 +27,7 @@ h2{
 }
 
 
-p{
+body{
     font-size: 20px;
     font-family: "Micro 5", sans-serif;
     font-weight: 400;
@@ -39,8 +35,8 @@ p{
 }
 
 b{
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 420;
     font-style: normal;
 }
 
@@ -61,3 +57,20 @@ b{
     margin: 10px auto;
     width: 500px;
 }
+
+
+.dropdown-content {
+    position: fixed;           
+                         
+    left: 0;                   
+    float: left;               
+    
+    padding: 50px;
+ 
+                
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    text-align: center;
+  }
