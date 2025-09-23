@@ -114,12 +114,7 @@
     border: solid 3px black;
     flex-direction: row;
 }
-.child4 {
-    width: 40%;
-    height: 100%;
-    background: red;
-    border: solid 3px black;
-}
+
 
 #triangle-topleft {
     width: 0;
