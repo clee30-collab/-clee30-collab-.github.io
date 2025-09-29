@@ -5,7 +5,7 @@ body {
     gap: 50px;
     justify-content: center;
     padding: 40px;
-    background: #f8f8f8;
+    background: black;
   }
   .letter {
     position: relative;
@@ -16,13 +16,13 @@ body {
   .stem {
     position: absolute;
     left: 0;
-    background: rgb(17, 17, 17);
+    background-color: #ecece7;
   }
   .arm {
     position: absolute;
     width: 140px;
     height: 40px;
-    background: rgb(17, 17, 17);
+    background-color: #d0d1c4;
     transform-origin: left;
   }
 
@@ -58,7 +58,7 @@ body {
     height: 100%;
   }
   .k2 .arm-top{
-
+    
     left: 210px;
     width: 140px;
     height: 150px;
@@ -66,6 +66,7 @@ body {
     transform: rotate(180deg);
   }
   .k2 .arm-bottom {
+    
     bottom: 80px;
     left: 140px;
     width: 150px;
@@ -89,6 +90,7 @@ body {
     height: 20px;
   }
   .k3 .arm-bottom {
+    
     bottom: 67px;
     left: 120px;
     width: 100px;
@@ -98,6 +100,7 @@ body {
  
 
   .k4 .stem {
+    
     width: 40px;
     height: 100%;
   }
@@ -106,7 +109,7 @@ body {
     left: 60px;
     width: 0;
     height: 0;
-    border-top: 140px solid green;
+    border-top: 140px solid #d0d1c4;
     border-right: 140px solid transparent;
     background: none;
     transform: none;
@@ -116,7 +119,7 @@ body {
     left: 60px;
     width: 0;
     height: 0;
-    border-bottom: 140px solid green;
+    border-bottom: 140px solid #d0d1c4;
     border-right: 140px solid transparent;
     background: none;
     transform: none;
@@ -127,7 +130,7 @@ body {
     left: 0px;
     width: 0;
     height: 0;
-    border-top: 200px solid rgb(17, 17, 17);
+    border-top: 200px solid #ecece7;
     border-right: 200px solid transparent;
     background: none;
     transform: none;
@@ -137,7 +140,7 @@ body {
     left: 0px;
     width: 0;
     height: 0;
-    border-top: 100px solid white;
+    border-top: 100px solid black;
     border-right: 100px solid transparent;
     background: none;
     transform: none;
@@ -148,7 +151,7 @@ body {
     left: 0px;
     width: 0;
     height: 0;
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid black;
     border-right: 100px solid transparent;
     background: none;
     transform: none;
@@ -159,7 +162,7 @@ body {
     left: 0px;
     width: 0;
     height: 0;
-    border-bottom: 200px solid rgb(17, 17, 17);
+    border-bottom: 200px solid #d0d1c4;
     border-right: 200px solid transparent;
     background: none;
     transform: none;
