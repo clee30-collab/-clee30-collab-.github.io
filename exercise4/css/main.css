@@ -1,130 +1,195 @@
-.parent1{
-    position: absolute;
+/* Layout */
+body {
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px;
+    background: #f8f8f8;
+  }
+  .letter {
+    position: relative;
+    width: 200px;
     height: 300px;
-    width: 300px;
-    border: solid 3px black;
-    flex-direction: column;
-}
-.child1{
-    width: 35%;
-    height: 100%;
-    background: red;
-    border: solid 3px black;
-}
-#circle {
-    width: 300px;
-    height: 100px;
-    background: red;
-    border-radius: 50%;
-    transform: skewY(-40deg);
- }
-  #circledown {
-    width: 300px;
-    height: 100px;
-    background: red;
-    border-radius: 50%;
-    transform: skewY(40deg);
+    ;
+  }
+  .stem {
+    position: absolute;
+    left: 0;
+    background: rgb(17, 17, 17);
+  }
+  .arm {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    background: rgb(17, 17, 17);
+    transform-origin: left;
   }
 
 
 
-#letter2 {
-    left: 500px;
-}
-#armposition2{
-    transform: translateY(50px);
-}
-.parent2{
-    position: absolute;
-    display: flex;
-    height: 300px;
-    width: 300px;
-    border: solid 3px black;
-    flex-direction: column;
-}
-.child2{
-    width: 40%;
+
+
+
+
+  .k1 .stem {
+    border-radius: 20px;
+    width: 40px;
     height: 100%;
-    background: red;
-    border: solid 3px black;
-}
-#arm2 {
-    width: 300px;
-    height: 100px;
-    background: red;
-
-    transform: skewY(-40deg);
-}
-#arm2down {
-    width: 300px;
-    height: 100px;
-    background: red;
-    transform: skewY(40deg);
-}
+  }
+  .k1 .arm {
+    border-radius: 20px;
+    width: 40px;
+    height: 70%;
+  }
+  .k1 .arm-top{
+    bottom: -39px;
+    left: 90px;
+  }
+  .k1 .arm-bottom{
+    top: -50px;
+    left: 110px;
+  }
 
 
-
-#letter3 {
-    top: 500px;
-    left: 10px;
-}
-#armposition3{
-    transform: translateY(100px);
-}
-.parent3{
-    position: absolute;
-    display: flex;
-    height: 300px;
-    width: 300px;
-    border: solid 3px black;
-    flex-direction: column;
-}
-.child3{
-    width: 10%;
+  .k2 .stem {
+    
+    width: 60px;
     height: 100%;
-    background: red;
-    border: solid 3px black;
-}
-#arm3 {
+  }
+  .k2 .arm-top{
+
+    left: 210px;
+    width: 140px;
+    height: 150px;
+    border-top-left-radius: 100%;
+    transform: rotate(180deg);
+  }
+  .k2 .arm-bottom {
+    bottom: 80px;
+    left: 140px;
+    width: 150px;
+    height: 140px;
+    border-top-left-radius: 100%;
+    transform: rotate(-270deg);
+  }
+
+
+
+  .k3 .stem {
+    
     width: 20px;
-    width: 200px;
-    background: red;
-    transform: skewY(-40deg);
-}
-#arm3down {
-    width: 20px;
-    width: 200px;
-    background: red;
-    transform: skewY(40deg);
-    transform: translateY(100px);
-}
+    height: 100%;
+  }
+  .k3 .arm-top{
+    
+    top: 57px;
+    left: 110px;
+    width: 87px;
+    height: 20px;
+  }
+  .k3 .arm-bottom {
+    bottom: 67px;
+    left: 120px;
+    width: 100px;
+    height: 20px;
+    
+  }
+ 
 
-
-
-#letter4 {
-    top: 500px;
-    left: 500px;
-}
-.parent4 {
-    position: absolute;
-    display: flex;
-    height: 300px;
-    width: 300px;
-    border: solid 3px black;
-    flex-direction: row;
-}
-
-
-#triangle-topleft {
+  .k4 .stem {
+    width: 40px;
+    height: 100%;
+  }
+  .k4 .arm-top {
+    top: 0 px;
+    left: 60px;
     width: 0;
     height: 0;
-    border-top: 100px solid red;
+    border-top: 140px solid green;
+    border-right: 140px solid transparent;
+    background: none;
+    transform: none;
+  }
+  .k4 .arm-bottom {
+    bottom: 0px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid green;
+    border-right: 140px solid transparent;
+    background: none;
+    transform: none;
+  }
+  
+  .k5 .stem {
+    top: 0 px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 200px solid rgb(17, 17, 17);
+    border-right: 200px solid transparent;
+    background: none;
+    transform: none;
+  }
+  .k5 .arm-top {
+    top: 0 px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid white;
     border-right: 100px solid transparent;
+    background: none;
+    transform: none;
+   
   }
-#triangle-topright {
+  .k5 .arm-bottom {
+    bottom: 0px;
+    left: 0px;
     width: 0;
     height: 0;
-    border-top: 100px solid red;
-    border-left: 100px solid transparent;
+    border-bottom: 100px solid white;
+    border-right: 100px solid transparent;
+    background: none;
+    transform: none;
+  
   }
+  .k5 .arm-bottom2 {
+    bottom: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid rgb(17, 17, 17);
+    border-right: 200px solid transparent;
+    background: none;
+    transform: none;
+  
+  }
+
+
+
+
+
+
+
+
+
+  /* changing the degree of the arms */
+  .k1 .arm-top {
+    transform: rotate(-40deg) translateX(10px);
+  }
+  .k1 .arm-bottom {
+    transform: rotate(40deg) translateY(20px);
+  }
+  
+ 
+  
+  /* K3 arms */
+  .k3 .arm-top {
+    transform: rotate(-35deg) scaleX(1.2);
+  }
+  .k3 .arm-bottom {
+    transform: rotate(50deg) translateY(-10px);
+  }
+
+  
