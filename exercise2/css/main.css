@@ -6,6 +6,11 @@ a {
     color: palevioletred; /* Color after being visited */
   }
 
+  ul {
+    list-style-type: none;
+  
+  }
+
 
 h1{
     font-family: "Jacquard 12", system-ui;
@@ -16,7 +21,7 @@ h1{
 }
 
 
-  
+
 
 h2{
     font-size: 40px;
@@ -28,14 +33,15 @@ h2{
 
 
 body{
-    font-size: 20px;
-    font-family: "Micro 5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+  font-weight: weight;
+  font-style: normal;
 }
 
 b{
     font-size: 30px;
+    font-family: "Micro 5", sans-serif;
     font-weight: 420;
     font-style: normal;
 }
@@ -49,7 +55,7 @@ b{
 }
 
 .wrapper{
-    margin: 10px auto;
+    margin: 100px auto;
     width: 700px;
 }
 
@@ -60,13 +66,9 @@ b{
 
 
 .dropdown-content {
-    position: fixed;           
-                         
-    left: 0;                   
-    float: left;               
-    
+    position: fixed;    
+    top: 40%;
     padding: 50px;
- 
                 
     font-family: "Jacquard 12", system-ui;
     font-weight: 400;
