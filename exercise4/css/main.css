@@ -1,4 +1,4 @@
-/* Layout */
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +177,7 @@ body {
 
 
 
-  /* changing the degree of the arms */
+  
   .k1 .arm-top {
     transform: rotate(-40deg) translateX(10px);
   }
@@ -186,10 +186,9 @@ body {
   }
   
  
-  
-  /* K3 arms */
+ 
   .k3 .arm-top {
-    transform: rotate(-35deg) scaleX(1.2);
+    transform: rotate(-35deg) ;
   }
   .k3 .arm-bottom {
     transform: rotate(50deg) translateY(-10px);

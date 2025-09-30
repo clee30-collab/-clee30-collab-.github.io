@@ -1,0 +1,112 @@
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    
+    background: black;
+  }
+  .letter {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    
+    
+    ;
+  }
+
+  .arm {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    background-color: #d0d1c4;
+    transform-origin: left;
+  }
+
+
+   .stem {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #ecece7;
+    
+  }
+  
+ 
+  
+  .arm-top{
+    
+    top: 57px;
+    left: 110px;
+    width: 100px;
+    height: 20px;
+  }
+   .arm-bottom {
+    
+    bottom: 67px;
+    left: 130px;
+    width: 100px;
+    height: 20px;
+  }
+ 
+
+
+ .arm-top {
+    transform: rotate(-35deg) ;
+  }
+   .arm-bottom {
+    transform: rotate(50deg) translateX(0px);
+  }
+
+
+
+.stem,
+.arm-bottom{
+  transition: transform 0.6s ease;
+}
+
+.letter:hover .arm-top {
+    animation: armTopBounce 1.3s infinite alternate ease-in-out;
+  }
+.letter:hover .arm-bottom {
+  animation: armBottomBounce 1.3s infinite alternate ease-in-out;
+}
+.letter:hover .stem {
+    animation: stemBounce 1.3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes stemBounce {
+    from {
+       
+      transform: scaleY(1);
+    }
+    to {
+   
+      transform: scaleY(20)translateY(-10px); 
+    }
+  }
+  
+@keyframes armBottomBounce {
+  from {
+    transform: rotate(50deg) translateX(0px);
+  }
+  to {
+    transform: rotate(50deg)  translateX(-10px) scaleX(20); 
+    
+  }
+}
+
+@keyframes armTopBounce {
+    from {
+      transform: rotate(-35deg) translateX(0px);
+    }
+    to {
+      transform: rotate(-35deg)  translateX(10px) scaleX(20); 
+      
+    }
+  }
+
+
