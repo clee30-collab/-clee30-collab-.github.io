@@ -1,23 +1,7 @@
-
-#play{
-	width: 100px;
-	height: 100px;
-	background-color: green;
-}
-#pause{
-	width: 100px;
-	height: 100px;
-	background-color: red;
-}
-
 .controls{
-	align-items: center;
-	margin-top: 8rem;
-	
+	text-align: center;
+	margin-top: 3rem;
 }
-
-
-
 .elementcontainer {
 	height: 80vh;
 	display: flex;
@@ -25,7 +9,6 @@
   	align-content: center;
   	-webkit-flex-flow: wrap;
   	justify-content: center;
-	  
 }
 
 
@@ -34,14 +17,20 @@
 	height: 100px;
 	margin: 10px;
 	transition: background-color 800ms ease-in;
-	background-color: red;
+	background-color: blue;
+}
+
+.element2 {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	transition: background-color 800ms ease-in;
+	background-color: green;
 }
 
 .element:hover{
 	cursor: pointer;
 }
-
-
 
 
 .play{
@@ -51,10 +40,27 @@
 
 @keyframes wheel {
 	0% {
-		transform: rotate(50deg) scaleX(1);
+		transform: rotateY(0deg);
+
 	}
 	100% {
-		transform: rotate(50deg) scaleX(6);
+		transform: rotateY(360deg);
 	}
 }
 
+.element2:hover{
+	cursor: pointer;
+}
+.element2.play {
+	background-color: rgb(0, 255, 200);
+	animation: bounce 1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+	0%, 100% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-20px);
+	}
+  }
