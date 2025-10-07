@@ -3,29 +3,29 @@
 	margin-top: 3rem;
 }
 .elementcontainer {
-	height: 80vh;
 	display: flex;
-  	align-items: center;
-  	align-content: center;
-  	-webkit-flex-flow: wrap;
-  	justify-content: center;
+  flex-wrap: wrap;
+  justify-content: centered;
+  align-content: centered;
+  width: 100vw;
+  height: 100vh;
 }
 
 
 .element {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	margin: 10px;
-	transition: background-color 800ms ease-in;
-	background-color: blue;
+	
 }
 
 .element2 {
+	position: relative;
 	width: 100px;
 	height: 100px;
 	margin: 10px;
-	transition: background-color 800ms ease-in;
-	background-color: green;
+	
 }
 
 .element:hover{
@@ -34,17 +34,16 @@
 
 
 .play{
-	background-color: rgb(255 0 230);
-	animation: wheel 1s ease-in-out infinite;
+	animation: wheel 2s ease-in-out infinite;
 }
 
 @keyframes wheel {
-	0% {
-		transform: rotateY(0deg);
+	0%, 100%{
+		transform: translateX(0);
 
 	}
-	100% {
-		transform: rotateY(360deg);
+	50% {
+		transform: translateX(-20px);
 	}
 }
 
@@ -52,8 +51,7 @@
 	cursor: pointer;
 }
 .element2.play {
-	background-color: rgb(0, 255, 200);
-	animation: bounce 1s ease-in-out infinite;
+	animation: bounce 2s ease-in-out infinite;
   }
   
   @keyframes bounce {

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+ 
 
   //---------------------------------------
   // when an individual element is clicked
