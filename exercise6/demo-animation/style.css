@@ -1,58 +1,43 @@
-.controls{
-	text-align: center;
-	margin-top: 3rem;
-}
-.elementcontainer {
-	display: flex;
-  flex-wrap: wrap;
-  justify-content: centered;
-  align-content: centered;
-  width: 100vw;
-  height: 100vh;
-}
-
-
-.element {
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+	align-items: center;
+	background-color: #f3f3f3;
+	font-family: sans-serif;
+  }
+  
+  .controls {
+	margin-top: 10px;
+  }
+  
+  button {
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
+	cursor: help;
+  }
+  
+  .elementcontainer {
 	position: relative;
+	width: 100vw;
+	height: 100vh;
+  }
+  
+  .element {
+	position: absolute;
 	width: 100px;
 	height: 100px;
-	margin: 10px;
-	
-}
-
-.element2 {
-	position: relative;
-	width: 100px;
+  }
+  
+  .element img {
+	width: 80px;
 	height: 100px;
-	margin: 10px;
-	
-}
-
-.element:hover{
-	cursor: pointer;
-}
-
-
-.play{
-	animation: wheel 2s ease-in-out infinite;
-}
-
-@keyframes wheel {
-	0%, 100%{
-		transform: translateX(0);
-
-	}
-	50% {
-		transform: translateX(-20px);
-	}
-	
-}
-
-.element2:hover{
-	cursor: pointer;
-}
-.element2.play {
-	animation: bounce 2s ease-in-out infinite;
+  }
+  
+  .play {
+	animation: bounce 1s ease-in-out infinite;
   }
   
   @keyframes bounce {
@@ -60,6 +45,8 @@
 	  transform: translateY(0);
 	}
 	50% {
-	  transform: translateY(-20px);
+	  transform: translateY(-90px);
+	  transform: scale(10);
 	}
   }
+  

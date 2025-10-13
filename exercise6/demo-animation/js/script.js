@@ -1,63 +1,58 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".elementcontainer");
+  const toggleButton = document.getElementById("toggle");
+  const playButton = document.getElementById("play");
+  const pauseButton = document.getElementById("pause");
+
+  let elementsVisible = false;
+  let elements = [];
+
  
+  function randomPosition() {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 120);
+    return { x, y };
+  }
 
-  //---------------------------------------
-  // when an individual element is clicked
-  // toggle the 'play' class
-  //---------------------------------------
-  const elements = document.querySelectorAll('.element, .element2');
-  elements.forEach(function(element) {
-    element.addEventListener('click', function() {
-      this.classList.toggle('play');
-    });
+  function createElements() {
+    container.innerHTML = ""; 
+    elements = [];
+
+    for (let i = 0; i < 10; i++) {
+      const el = document.createElement("div");
+      el.classList.add("element");
+
+      const img = document.createElement("img");
+      img.src = "images/dog.png";
+      el.appendChild(img);
+
+      const pos = randomPosition();
+      el.style.left = `${pos.x}px`;
+      el.style.top = `${pos.y}px`;
+
+      container.appendChild(el);
+      elements.push(el);
+    }
+  }
+
+ 
+  toggleButton.addEventListener("click", () => {
+    if (elementsVisible) {
+      container.innerHTML = "";
+      elementsVisible = false;
+    } else {
+      createElements();
+      elementsVisible = true;
+    }
   });
 
-  //---------------------------------------
-  // toggle button - toggles 'play' on all elements
-  //---------------------------------------
-  const toggleButton = document.getElementById('toggle');
-  toggleButton.addEventListener('click', function() {
-    elements.forEach(function(element) {
-      element.classList.toggle('play');
-
-      const img = element.querySelector('img');
-
-      if (img) {
-        img.remove();
-      } else {
-        const newImg = document.createElement('img');
-        newImg.src = 'images/dog.png';
-        newImg.style.width = '100px';
-        newImg.style.height = '100px';
-        element.appendChild(newImg);
-      }
-    });
+  
+  playButton.addEventListener("click", () => {
+    elements.forEach(el => el.classList.add("play"));
   });
 
-  //---------------------------------------
-  // play button - adds 'play' to all elements
-  //---------------------------------------
-  const playButton = document.getElementById('play');
-  playButton.addEventListener('click', function() {
-    elements.forEach(function(element) {
-      element.classList.add('play');
-    });
+ 
+  pauseButton.addEventListener("click", () => {
+    elements.forEach(el => el.classList.remove("play"));
   });
-
-  //---------------------------------------
-  // pause button - removes 'play' from all elements and hides the image
-  //---------------------------------------
-  const pauseButton = document.getElementById('pause');
-  pauseButton.addEventListener('click', function() {
-    elements.forEach(function(element) {
-      element.classList.remove('play');
-
-
-      const img = element.querySelector('img');
-      if (img) {
-        img.remove();
-      }
-    });
-  });
-
 });
