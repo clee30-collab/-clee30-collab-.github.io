@@ -1,0 +1,67 @@
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.playfair-display{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+
+  .unbounded{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+  .grid {
+    width: 300px;
+  }
+  
+  .box {
+    background: orange;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    float: left;
+  }
+  
+  .wide {
+    width: 190px;
+  }
+  
+  .tall {
+    height: 190px;
+  }
+  
+  .empty {
+    background: transparent
+  }
+  
+  
+  /* you can ignore everything after this comment - it's all for illustration */
+  body {
+    background: #334;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .example {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid #445;
+    padding: 10px;
+  
+    width: 300px;
+  }
+  
+  h3 {
+    margin: 0 0 5px 0;
+  }
