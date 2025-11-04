@@ -7,10 +7,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    position: relative; /* needed for absolute titles */
+    position: relative; 
 }
 
-/* Top title */
+
 .attic-title {
     position: absolute;
     top: 20px;
@@ -23,17 +23,17 @@ body {
     text-align: center;
 }
 
-/* Container for grid with fixed size */
+
 .grid-container {
     width: 800px;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue; /* optional: see container */
+    border: 1px solid blue;
 }
 
-/* Grid inside the container */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,7 +47,7 @@ body {
     
 }
 
-/* Box styling */
+
 .box {
     background-color: #fdf9f6;
     display: flex;
@@ -59,15 +59,15 @@ body {
 
 }
 
-/* Images */
+
 .box img {
-    width: 80%; /* fits inside each box */
+    width: 80%; 
     height: 80%;
     display: block;
     object-fit: contain;
 }
 
-/* Dollhouse title at top-right */
+
 .dollhouse-title {
     position: absolute;
     right: 20px;
@@ -77,18 +77,17 @@ body {
     color: #161416;
     text-align: right;
 }
-/* Dollhouse title link */
+
 .dollhouse-title a {
     text-decoration: none;
-    color: #161416;        /* default color */
+    color: #161416;        
     transition: color 0.2s;
 }
 
 .dollhouse-title a:hover {
-    color: #fdf9f6;        /* hover color */
+    color: #fdf9f6;      
 }
 
-/* Shake animation for attic images */
 .box img:hover {
     animation: shakeAndRotate 0.5s ease-in-out infinite;
 }
@@ -121,23 +120,21 @@ body {
     align-items: center;
   }
   
-  /* Bigger triangle roof — 1.8x original size */
+ 
   .roof {
     width: 0;
     height: 0;
-    border-left: 45px solid transparent; /* was 25px */
+    border-left: 45px solid transparent; 
     border-right: 45px solid transparent;
-    border-bottom: 43px solid #3c60c6; /* was 24px */
+    border-bottom: 43px solid #3c60c6; 
     cursor: pointer;
     transition: border-bottom-color 0.2s;
   }
   
-  /* Hover effect for roof */
   .roof-link:hover .roof {
     border-bottom-color: #e5e4c6;
   }
   
-  /* Bigger house body: 1.8x larger (was 50x37) */
   .house-body {
     width: 90px;
     height: 67px;
@@ -146,10 +143,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
   }
-  
-  /* Default color for blocks */
+
   .block {
-    background-color: #161416; /* inactive */
+    background-color: #161416; 
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -157,30 +153,32 @@ body {
     transition: background-color 0.2s;
   }
   
-  /* Hover color */
   .block-link:hover .block {
     background-color: #e5e4c6;
   }
-/* bedroom */
+
+
+
+
+
+
 
 #bedroom {
     background-color: #aeba3e; 
 }
-/* Bedroom-specific nav highlight */
+
 #bedroom .roof {
-    border-bottom-color: #161416; /* dark roof */
+    border-bottom-color: #161416; 
   }
-  
-  /* The upper-left square active (bedroom) */
+
   #bedroom .block.upper-left {
-    background-color: #3c60c6; /* blue active room */
+    background-color: #3c60c6; 
   }
   
 #bedroom .block {
     background-color: #161416; 
 }
 
-/* Optional: hover color stays the same */
 #bedroom .block-link:hover .block {
     background-color: #aeba3e; 
 }

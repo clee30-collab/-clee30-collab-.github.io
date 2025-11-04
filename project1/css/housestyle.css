@@ -21,7 +21,6 @@ body {
   align-items: center;
 }
 
-/* Base dollhouse */
 .dollhouse {
   width: 900px;
   height: auto;
@@ -29,7 +28,6 @@ body {
   z-index: 1;
 }
 
-/* Invisible trigger areas - temporarily visible with red border for adjustment */
 .trigger {
   position: absolute;
   z-index: 2;
@@ -40,7 +38,6 @@ body {
   
 }
 
-/* Attic trigger - roof area (top triangle, approximately top 30% of dollhouse) */
 .attic-trigger {
   width: 300px;
   height: 150px; 
@@ -48,36 +45,35 @@ body {
   margin-left: -150px;
 }
 
-/* Four quadrant triggers - rectangular base (bottom 70% divided into 4 equal parts) */
 .bedroom-trigger {
-  width: 180px; /* Half width */
-  height: 130px; /* Half of remaining 70% */
-  margin-top: -20px; /* Position in upper half of base */
-  margin-left: -180px; /* Left side */
+  width: 180px; 
+  height: 130px; 
+  margin-top: -20px; 
+  margin-left: -180px; 
 }
 
 .bathroom-trigger {
-  width: 180px; /* Half width */
-  height: 130px; /* Half of remaining 70% */
-  margin-top: -20px; /* Position in upper half of base */
-  margin-left: 0px; /* Right side */
+  width: 180px; 
+  height: 130px; 
+  margin-top: -20px; 
+  margin-left: 0px; 
 }
 
 .kitchen-trigger {
-  width: 180px; /* Half width */
-  height: 130px; /* Half of remaining 70% */
-  margin-top: 115px; /* Position in lower half of base */
-  margin-left: -180px; /* Left side */
+  width: 180px;
+  height: 130px; 
+  margin-top: 115px; 
+  margin-left: -180px; 
 }
 
 .livingroom-trigger {
-  width: 180px; /* Half width */
-  height: 130px; /* Half of remaining 70% */
-  margin-top: 115px; /* Position in lower half of base */
-  margin-left: 0px; /* Right side */
+  width: 180px; 
+  height: 130px; 
+  margin-top: 115px; 
+  margin-left: 0px; 
 }
 
-/* Room images - positioned to overlay dollhouse perfectly */
+
 .room-image {
   position: absolute;
   width: 900px;
@@ -92,7 +88,6 @@ body {
   object-fit: contain;
 }
 
-/* Show room image when hovering over corresponding trigger */
 .attic-trigger:hover ~ .room-image.attic,
 .bedroom-trigger:hover ~ .room-image.bedroom,
 .bathroom-trigger:hover ~ .room-image.bathroom,
