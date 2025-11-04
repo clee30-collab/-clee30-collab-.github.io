@@ -1,67 +1,21 @@
-
-.raleway{
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-
-.playfair-display{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
-
-
-  .unbounded{
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
-  .grid {
-    width: 300px;
+.grid {
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
   }
   
   .box {
-    background: orange;
-    width: 90px;
-    height: 90px;
-    margin: 5px;
-    float: left;
+    border: 2px solid red;
+    height: 150px; /* give a minimum height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* optional: makes empty boxes visible */
   }
   
-  .wide {
-    width: 190px;
+  .box img {
+    width: 100px;
+    height: auto;
   }
   
-  .tall {
-    height: 190px;
-  }
-  
-  .empty {
-    background: transparent
-  }
-  
-  
-  /* you can ignore everything after this comment - it's all for illustration */
-  body {
-    background: #334;
-    color: white;
-    font-family: sans-serif;
-  }
-  
-  .example {
-    display: inline-block;
-    margin: 5px;
-    border: 1px solid #445;
-    padding: 10px;
-  
-    width: 300px;
-  }
-  
-  h3 {
-    margin: 0 0 5px 0;
-  }

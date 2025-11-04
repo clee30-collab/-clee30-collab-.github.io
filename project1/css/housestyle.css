@@ -1,0 +1,102 @@
+body {
+  background-color: #fdf9f6;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "unbounded", sans-serif;
+}
+
+.dollhouse-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: black;
+}
+
+.dollhouse-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base dollhouse */
+.dollhouse {
+  width: 900px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Invisible trigger areas - temporarily visible with red border for adjustment */
+.trigger {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+
+  
+}
+
+/* Attic trigger - roof area (top triangle, approximately top 30% of dollhouse) */
+.attic-trigger {
+  width: 300px;
+  height: 150px; 
+  margin-top: -170px; 
+  margin-left: -150px;
+}
+
+/* Four quadrant triggers - rectangular base (bottom 70% divided into 4 equal parts) */
+.bedroom-trigger {
+  width: 180px; /* Half width */
+  height: 130px; /* Half of remaining 70% */
+  margin-top: -20px; /* Position in upper half of base */
+  margin-left: -180px; /* Left side */
+}
+
+.bathroom-trigger {
+  width: 180px; /* Half width */
+  height: 130px; /* Half of remaining 70% */
+  margin-top: -20px; /* Position in upper half of base */
+  margin-left: 0px; /* Right side */
+}
+
+.kitchen-trigger {
+  width: 180px; /* Half width */
+  height: 130px; /* Half of remaining 70% */
+  margin-top: 115px; /* Position in lower half of base */
+  margin-left: -180px; /* Left side */
+}
+
+.livingroom-trigger {
+  width: 180px; /* Half width */
+  height: 130px; /* Half of remaining 70% */
+  margin-top: 115px; /* Position in lower half of base */
+  margin-left: 0px; /* Right side */
+}
+
+/* Room images - positioned to overlay dollhouse perfectly */
+.room-image {
+  position: absolute;
+  width: 900px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Show room image when hovering over corresponding trigger */
+.attic-trigger:hover ~ .room-image.attic,
+.bedroom-trigger:hover ~ .room-image.bedroom,
+.bathroom-trigger:hover ~ .room-image.bathroom,
+.kitchen-trigger:hover ~ .room-image.kitchen,
+.livingroom-trigger:hover ~ .room-image.livingroom {
+  opacity: 1;
+}
