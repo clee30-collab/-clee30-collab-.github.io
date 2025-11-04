@@ -1,21 +1,193 @@
-.grid {
-    width: 900px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px;
-  }
-  
-  .box {
-    border: 2px solid red;
-    height: 150px; /* give a minimum height */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "unbounded", sans-serif;
+    background-color: #e5e4c6;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8; /* optional: makes empty boxes visible */
+    min-height: 100vh;
+    position: relative; /* needed for absolute titles */
+}
+
+/* Top title */
+.attic-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #3c60c6;
+    text-align: center;
+}
+
+/* Container for grid with fixed size */
+.grid-container {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue; /* optional: see container */
+}
+
+/* Grid inside the container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 800px;
+    height: 500px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: -100px;
+    
+}
+
+/* Box styling */
+.box {
+    background-color: #fdf9f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+/* Images */
+.box img {
+    width: 80%; /* fits inside each box */
+    height: 80%;
+    display: block;
+    object-fit: contain;
+}
+
+/* Dollhouse title at top-right */
+.dollhouse-title {
+    position: absolute;
+    right: 20px;
+    top: 43px; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #161416;
+    text-align: right;
+}
+/* Dollhouse title link */
+.dollhouse-title a {
+    text-decoration: none;
+    color: #161416;        /* default color */
+    transition: color 0.2s;
+}
+
+.dollhouse-title a:hover {
+    color: #fdf9f6;        /* hover color */
+}
+
+/* Shake animation for attic images */
+.box img:hover {
+    animation: shakeAndRotate 0.5s ease-in-out infinite;
+}
+
+@keyframes shakeAndRotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: translateX(-2px) rotate(-4deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: translateX(2px) rotate(4deg);
+    }
+}
+.house-container a {
+    text-decoration: none;
+    display: block;
+}
+
+.house-container {
+    position: absolute;
+    right: 40px;
+    bottom: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .box img {
-    width: 100px;
-    height: auto;
+  /* Bigger triangle roof — 1.8x original size */
+  .roof {
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent; /* was 25px */
+    border-right: 45px solid transparent;
+    border-bottom: 43px solid #3c60c6; /* was 24px */
+    cursor: pointer;
+    transition: border-bottom-color 0.2s;
   }
+  
+  /* Hover effect for roof */
+  .roof-link:hover .roof {
+    border-bottom-color: #e5e4c6;
+  }
+  
+  /* Bigger house body: 1.8x larger (was 50x37) */
+  .house-body {
+    width: 90px;
+    height: 67px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  
+  /* Default color for blocks */
+  .block {
+    background-color: #161416; /* inactive */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  /* Hover color */
+  .block-link:hover .block {
+    background-color: #e5e4c6;
+  }
+/* bedroom */
+
+#bedroom {
+    background-color: #aeba3e; 
+}
+/* Bedroom-specific nav highlight */
+#bedroom .roof {
+    border-bottom-color: #161416; /* dark roof */
+  }
+  
+  /* The upper-left square active (bedroom) */
+  #bedroom .block.upper-left {
+    background-color: #3c60c6; /* blue active room */
+  }
+  
+#bedroom .block {
+    background-color: #161416; 
+}
+
+/* Optional: hover color stays the same */
+#bedroom .block-link:hover .block {
+    background-color: #aeba3e; 
+}
+
+#bedroom .roof-link:hover .roof {
+    border-bottom-color: #aeba3e; 
+}
+
+
   

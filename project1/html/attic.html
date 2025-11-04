@@ -4,22 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Attic Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Attic</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <header>
+    <h1 class="attic-title">ATTIC</h1>
 
-    <div class="example">
-        <h3>Attic Gallery</h3>
-        <div class="grid">
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-        </div>
-      </div>
+    <div class="grid">
+      <div class="box"><img src="../images/attic1.png" alt="Attic 1" data-sound="../sound/attic1.mp3"></div>
+      <div class="box"><img src="../images/attic2.png" alt="Attic 2" data-sound="../sound/attic2.mp3"></div>
+      <div class="box"><img src="../images/attic3.png" alt="Attic 3" data-sound="../sound/attic3.mp3"></div>
+      <div class="box"><img src="../images/attic4.png" alt="Attic 4" data-sound="../sound/attic4.mp3"></div>
+      <div class="box"><img src="../images/attic5.png" alt="Attic 5" data-sound="../sound/attic5.mp3"></div>
+      <div class="box"><img src="../images/attic6.png" alt="Attic 6" data-sound="../sound/attic6.mp3"></div>
       
+    </div>
+    
+   <!-- Dollhouse title at top-right -->
+<!-- Dollhouse title at top-right as link -->
+<h2 class="dollhouse-title">
+  <a href="house.html">DOLLHOUSE</a>
+</h2>
+
+
+<!-- House at bottom-right, horizontally aligned with Dollhouse title -->
+<!-- House as navigation -->
+<div class="house-container">
+  <a href="attic.html" class="roof-link">
+    <div class="roof"></div>
+  </a>
+  <div class="house-body">
+    <a href="bedroom.html" class="block-link"><div class="block upper-left"></div></a>
+    <a href="bathroom.html" class="block-link"><div class="block upper-right"></div></a>
+    <a href="kitchen.html" class="block-link"><div class="block lower-left"></div></a>
+    <a href="livingroom.html" class="block-link"><div class="block lower-right"></div></a>
+  </div>
+</div>
+
+
+<script src="../js/main.js"></script>
+  </main>
+  
 </body>
 </html>
